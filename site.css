@@ -9,7 +9,6 @@
   --accent-soft: rgba(29, 95, 224, 0.12);
   --line: #E2E8F2;
   --halo: rgba(29, 95, 224, 0.18);
-  --fill: #FFE7A3;
   --ring-dim: rgba(29, 95, 224, 0.14);
   --mark: 'Unbounded', 'Archivo Black', system-ui, sans-serif;
   --display: 'Archivo Black', 'Arial Black', system-ui, sans-serif;
@@ -27,7 +26,6 @@
     --accent-soft: rgba(76, 141, 255, 0.16);
     --line: rgba(255, 255, 255, 0.08);
     --halo: rgba(76, 141, 255, 0.30);
-    --fill: #5A4712;
     --ring-dim: rgba(76, 141, 255, 0.16);
     color-scheme: dark;
   }
@@ -42,7 +40,6 @@
   --accent-soft: rgba(76, 141, 255, 0.16);
   --line: rgba(255, 255, 255, 0.08);
   --halo: rgba(76, 141, 255, 0.30);
-  --fill: #5A4712;
   --ring-dim: rgba(76, 141, 255, 0.16);
   color-scheme: dark;
 }
@@ -160,4 +157,3 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
 .legal p { margin: 12px 0 0; }
 .legal ul, .legal ol { margin: 12px 0 0; padding-left: 22px; display: grid; gap: 8px; }
 .legal strong { color: var(--ink); font-weight: 600; }
-.fill { background: var(--fill); color: var(--ink); padding: 0 5px; border-radius: 4px; font-weight: 600; }
