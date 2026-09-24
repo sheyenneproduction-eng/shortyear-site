@@ -148,4 +148,15 @@
     });
     zone.addEventListener('pointerleave', function () { tx = 0; ty = 0; if (!raf) raf = requestAnimationFrame(frame); });
   });
+  // Les filets verticaux du fond : absents derrière le haut de page, demande de Sheyenne du 24 septembre 2026.
+  // Ils apparaissent quand le haut de page est à moitié sorti de l'écran.
+  var bg = document.querySelector('.bg'), hero = document.querySelector('.hero');
+  if (bg && hero) {
+    if (!('IntersectionObserver' in window)) { bg.classList.add('past-hero'); }
+    else {
+      new IntersectionObserver(function (entries) {
+        bg.classList.toggle('past-hero', entries[0].intersectionRatio < 0.5);
+      }, { threshold: [0, 0.5, 1] }).observe(hero);
+    }
+  }
 })();

@@ -92,7 +92,10 @@ body { background: transparent; }
 @keyframes drift1 { from { transform: translate3d(0,0,0); } to { transform: translate3d(12vmax, 8vmax, 0); } }
 @keyframes drift2 { from { transform: translate3d(0,0,0); } to { transform: translate3d(-10vmax, 12vmax, 0); } }
 .bg .grid { position: absolute; top: 0; bottom: 0; left: 50%; width: min(1200px, 100%); transform: translateX(-50%); padding-inline: clamp(20px, 4vw, 48px); box-sizing: border-box;
-  background-clip: content-box; background-origin: content-box; background-image: repeating-linear-gradient(to right, var(--grid) 0 1px, transparent 1px calc(100% / 12)); }
+  background-clip: content-box; background-origin: content-box; background-image: repeating-linear-gradient(to right, var(--grid) 0 1px, transparent 1px calc(100% / 12));
+  opacity: 0; transition: opacity .8s ease; }
+/* Pas de filets derrière le haut de page : ils arrivent en fondu une fois le haut de page quitté (home-ui.js). */
+.bg.past-hero .grid { opacity: 1; }
 .bg .grain { position: absolute; inset: 0; opacity: var(--grain); mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .9 0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>"); }
 [data-theme="dark"] .bg::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, transparent 55%, rgba(0,0,0,.45) 100%); }
@@ -195,7 +198,9 @@ section { position: relative; scroll-margin-top: 84px; }
 .cv-sep line { stroke: var(--tx); opacity: .12; stroke-width: 1; stroke-dasharray: 3 6; }
 .dip { fill: var(--accent); }
 .dip-glow { fill: rgba(var(--glow), .3); }
-.cv-dip { opacity: 0; transform-box: fill-box; transform-origin: center; }
+/* Le point grandit depuis son propre centre (226.4, 129 dans le viewBox de la courbe). Centré sur le groupe entier,
+   libellé WEEK 5 compris, il partait trop bas et remontait d'un coup : remarque de Sheyenne du 24 septembre 2026. */
+.cv-dip { opacity: 0; transform-box: view-box; transform-origin: 226.4px 129px; }
 .js .curve.in .cv-line, .js .curve.in .cv-glow { animation: draw 1.9s var(--ease) .25s both; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 .js .curve.in .cv-dip { animation: pop .8s var(--spring) 1.9s both; }
