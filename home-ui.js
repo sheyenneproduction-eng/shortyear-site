@@ -77,12 +77,7 @@
   document.querySelectorAll('[data-cycle], .m-cycle').forEach(function (ph) { cycle(ph, 4200); });
   if (/[?&]shoot/.test(location.search)) document.querySelectorAll('.scroller .roll').forEach(function (r) { r.style.animation = 'none'; });
 
-  // 52 WEEKS : les 52 semaines s'allument puis s'éteignent avec la distance ; l'anneau des 12 prend le relais.
-  var ticks = document.querySelector('[data-ticks]');
-  setRing(ticks, 0, false);
-  onView(ticks, function () {
-    setTimeout(function () { ticks.classList.add('fade'); setRing(ticks, 12, false, 110); }, still ? 0 : 2200);
-  }, { threshold: .5 });
+  // THREE FINISH LINES : les 3 lignes s'allument de l'intérieur vers l'extérieur, puis le fil se tend entre les 3 cartes (home.css).
 
   // La scène de WEEK 1, EVERY DAY, EVERY WEEK : l'étape au milieu de l'écran choisit l'écran du téléphone.
   var story = document.getElementById('story');
