@@ -398,6 +398,52 @@ section { position: relative; scroll-margin-top: 84px; }
 .w13 .stage { --rs: min(540px, 70vh, 38vw); }
 .w13 .copy { display: grid; gap: 20px; max-width: 480px; }
 
+/* ---------- THE DIFFERENCE : le tableau comparatif, version A2 épurée choisie par Sheyenne le 30 septembre 2026 (section 186).
+   Des catégories, jamais des marques. Signes plein, moitié, vide : jamais rouge. ---------- */
+[data-theme="dark"] { --no-ring: rgba(127,141,163,.62); --pillar-bg: linear-gradient(180deg, rgba(76,141,255,.17) 0%, rgba(76,141,255,.06) 34%, rgba(76,141,255,.05) 70%, rgba(76,141,255,.11) 100%);
+  --pillar-edge: rgba(150,185,255,.26); --pillar-shadow: 0 40px 90px -40px rgba(76,141,255,.55); --yes-glow: drop-shadow(0 0 7px rgba(170,200,255,.45)); }
+[data-theme="light"] { --no-ring: #AEB8C8; --pillar-bg: linear-gradient(180deg, #E9F0FD 0%, #F3F6FC 45%, #EDF2FC 100%);
+  --pillar-edge: rgba(29,95,224,.28); --pillar-shadow: 0 30px 60px -30px rgba(29,95,224,.35), 0 12px 30px -18px rgba(22,36,70,.25); --yes-glow: none; }
+.cmp .head { max-width: 760px; }
+.ico { width: 24px; height: 24px; flex: none; display: block; }
+.ico .disc { fill: var(--tx); }
+.ico .tick { fill: none; stroke: var(--bg); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+[data-theme="light"] .ico .tick { stroke: #FFFFFF; }
+.ico .ring { fill: none; stroke: var(--tx3); stroke-width: 1.6; }
+.ico .half { fill: var(--tx3); }
+.ico.no .ring { stroke: var(--no-ring); }
+.cmp-wm { height: auto; width: 118px; }
+.js .cmp [data-reveal]:not(.head):not(.tglow) { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0s); }
+.js .cmp [data-reveal].in:not(.head):not(.tglow) { opacity: 1; transform: none; }
+.cmpA2 { position: relative; max-width: 940px; margin: clamp(36px, 5vw, 60px) auto 0; padding: 6px 28px 6px; border-radius: 28px; background: var(--card); box-shadow: inset 0 0 0 1px var(--card-edge); }
+[data-theme="light"] .cmpA2 { box-shadow: 0 0 0 1px var(--card-edge), 0 18px 40px -26px rgba(22,36,70,.28); }
+.cmpA2-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.8fr) repeat(4, minmax(0, 1fr)); grid-template-rows: auto repeat(6, auto); }
+.cmpA2 .hdr, .cmpA2 .r { display: contents; }
+.cmpA2 .pillar { position: absolute; inset: -22px 0 -22px; grid-column: 5; grid-row: 1 / 8; border-radius: 22px; background: var(--pillar-bg); box-shadow: inset 0 0 0 1px var(--pillar-edge), var(--pillar-shadow); }
+.cmpA2 .col { position: relative; z-index: 1; display: grid; place-items: end center; padding: 22px 4px 16px; text-align: center; font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--tx2); }
+.cmpA2 .col .syw { display: none; font-weight: 700; color: var(--tx); }
+.cmpA2 .lab { position: relative; z-index: 1; display: flex; align-items: center; padding: 18px 16px 18px 0; border-top: 1px solid var(--line); font-size: 17px; font-weight: 600; line-height: 1.3; color: var(--tx); }
+.cmpA2 .c { position: relative; z-index: 1; display: grid; place-items: center; padding: 18px 0; border-top: 1px solid var(--line); }
+.cmpA2 .c.sy { border-top-color: transparent; }
+.cmpA2 .c.sy .ico { width: 28px; height: 28px; filter: var(--yes-glow); }
+.cmpA2-foot { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 20px; margin: 26px auto 0; font-size: 13.5px; color: var(--tx3); }
+.cmpA2-foot span { display: inline-flex; align-items: center; gap: 7px; }
+.cmpA2-foot .ico { width: 16px; height: 16px; }
+.cmpA2-foot .sep { width: 1px; height: 14px; background: var(--line); }
+@media (max-width: 760px) {
+  .cmp.sec { padding-top: 88px; }
+  .cmpA2 { padding: 2px 10px 2px; border-radius: 22px; }
+  .cmpA2-grid { grid-template-columns: minmax(0, 1fr) repeat(3, 46px) 64px; }
+  .cmpA2 .pillar { inset: -12px 0 -12px; border-radius: 18px; }
+  .cmpA2 .col { padding: 16px 0 12px; font-size: 11px; line-height: 1.2; }
+  .cmpA2 .col .cmp-wm { display: none; } .cmpA2 .col .syw { display: block; font-size: 11.5px; }
+  .cmpA2 .lab { padding: 14px 8px 14px 4px; font-size: 14.5px; line-height: 1.28; }
+  .cmpA2 .c { padding: 14px 0; }
+  .cmpA2 .ico { width: 20px; height: 20px; }
+  .cmpA2 .c.sy .ico { width: 24px; height: 24px; }
+  .cmpA2-foot .sep { display: none; }
+  .cmpA2-foot { margin-top: 20px; font-size: 12.5px; gap: 6px 14px; }
+}
 /* ---------- THE PRICE ---------- */
 .plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: 100%; max-width: 620px; margin: 40px auto 0; }
 .plan { position: relative; display: grid; gap: 4px; align-content: start; text-align: left; padding: 24px; border-radius: 22px; background: var(--card); box-shadow: inset 0 0 0 1px var(--card-edge); }
