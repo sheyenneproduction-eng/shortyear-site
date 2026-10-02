@@ -24,7 +24,7 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches||new URLSearchParams(l
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&text=ShrtyeaWEK1VRYDA23504OFTHCPI6789&display=swap">
-<link rel="stylesheet" href="home.css?v=93d50462">
+<link rel="stylesheet" href="home.css?v=526a298a">
 </head>
 <body>
 <div class="bg" aria-hidden="true" data-live><span class="aur a1"></span><span class="aur a2"></span><span class="aur a3"></span><span class="grid"></span><span class="grain"></span></div>
@@ -280,6 +280,23 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches||new URLSearchParams(l
     </div>
   </section>
 
+  <!-- 9 ter. DAY AND NIGHT : le rideau, maquette A, décision de Sheyenne du 2 octobre 2026. La boule glisse sur la barre et
+       coupe l'écran : à gauche le sombre, à droite le clair. La page d'un objectif remplie depuis 9 semaines, avec un creux
+       en semaines 4 et 5 (« une courbe un tout petit peu moins parfaite »). Le curseur est un vrai input range : souris, doigt
+       et clavier. -->
+  <section class="wrap sec dn" id="day-night" data-frame="day and night" data-frame-top="96">
+    <div class="head center" data-reveal>
+      <span class="tglow " data-reveal data-live aria-hidden="true"></span>
+      <p class="label">DAY AND NIGHT</p>
+      <h2 class="shine">Light or dark, your call.</h2>
+      <p class="body">Shortyear follows your phone, or you choose. Slide to see both.</p>
+    </div>
+    <div class="dn-stage" data-reveal style="--p:50%">
+      <figure class="phone dn-phone"><div class="screen"><img class="dn-dark" src="assets/goalprog-dark-640.webp" srcset="assets/goalprog-dark-640.webp 640w, assets/goalprog-dark.webp 1179w" sizes="(max-width: 899px) 70vw, 320px" alt="Goals: Save $3,000 in dark mode, 2,010 of 3,000 after 9 weeks, a flat week 5, and the focus hours week by week" width="1179" height="2556" loading="lazy" decoding="async"><div class="dn-light" aria-hidden="true"><img class="dn-light-img" src="assets/goalprog-light-640.webp" srcset="assets/goalprog-light-640.webp 640w, assets/goalprog-light.webp 1179w" sizes="(max-width: 899px) 70vw, 320px" alt="Goals: Save $3,000 in light mode, 2,010 of 3,000 after 9 weeks, a flat week 5, and the focus hours week by week" width="1179" height="2556" loading="lazy" decoding="async"></div><span class="dn-line" aria-hidden="true"></span><span class="glass" aria-hidden="true"></span></div></figure>
+      <div class="dn-track"><svg class="dn-ico dn-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><div class="dn-rail"><span class="dn-fill" aria-hidden="true"></span><input class="dn-range" type="range" min="0" max="100" value="50" step="1" aria-label="Slide between dark and light mode"></div><svg class="dn-ico dn-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></div>
+    </div>
+  </section>
+
   <!-- 9 bis. THE DIFFERENCE : le tableau comparatif, version A2 épurée (section 186, 30 septembre 2026). Juste avant le prix :
        le lecteur a vu tout le cycle, le tableau le résume en 6 lignes, puis le prix. -->
   <section class="wrap sec cmp" id="compare" data-frame="the difference" data-frame-top="96" style="padding-bottom:0">
@@ -428,7 +445,7 @@ if(matchMedia('(prefers-reduced-motion: reduce)').matches||new URLSearchParams(l
   <small>© 2026 Shortyear</small>
 </footer>
 
-<script src="home-ui.js?v=c8a32bc2"></script>
+<script src="home-ui.js?v=29417809"></script>
 <script src="home.js?v=9bfb3dd6"></script>
 </body>
 </html>

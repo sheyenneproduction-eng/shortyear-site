@@ -565,3 +565,25 @@ section { position: relative; scroll-margin-top: 84px; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .bg .aur { transform: none !important; }
 }
+
+/* DAY AND NIGHT, le rideau (décision de Sheyenne du 2 octobre 2026). --p : la position de la boule, de 0 % à 100 %. */
+.dn .head { margin-inline: auto; }
+.dn-stage { margin-top: clamp(40px, 5vw, 64px); display: grid; justify-items: center; gap: 30px; }
+.dn-phone { --pw: clamp(240px, 26vw, 320px); }
+.dn-phone .screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.dn-light { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--p)); }
+.dn-line { position: absolute; top: 0; bottom: 0; left: var(--p); width: 2px; margin-left: -1px; background: rgba(255,255,255,.9); box-shadow: 0 0 16px rgba(var(--glow), .9), 0 0 4px rgba(var(--glow), .9); z-index: 3; pointer-events: none; }
+.dn-track { width: min(420px, 100%); display: grid; grid-template-columns: 26px 1fr 26px; align-items: center; gap: 16px; }
+.dn-ico { width: 22px; height: 22px; fill: none; stroke: var(--tx2); stroke-width: 1.8; stroke-linecap: round; justify-self: center; }
+.dn-moon { stroke: var(--accent); }
+.dn-rail { position: relative; height: 6px; border-radius: 6px; background: var(--surface-hi); box-shadow: inset 0 0 0 1px var(--line); }
+.dn-fill { position: absolute; left: 0; top: 0; bottom: 0; width: var(--p); border-radius: 6px; background: linear-gradient(90deg, #1A2331, #FFFFFF); opacity: .6; }
+.dn-range { position: absolute; left: -15px; right: -15px; top: 50%; width: calc(100% + 30px); height: 44px; margin: -22px 0 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: grab; touch-action: pan-y; }
+.dn-range:active { cursor: grabbing; }
+.dn-range::-webkit-slider-runnable-track { height: 44px; background: transparent; }
+.dn-range::-moz-range-track { height: 44px; background: transparent; }
+.dn-range::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; margin-top: 7px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 6px rgba(var(--glow), .22), 0 8px 22px rgba(0,0,0,.45); }
+.dn-range::-moz-range-thumb { width: 30px; height: 30px; border: 0; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 6px rgba(var(--glow), .22), 0 8px 22px rgba(0,0,0,.45); }
+.dn-range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px var(--accent), 0 0 0 9px rgba(var(--glow), .3); }
+.dn-range:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 3px var(--accent), 0 0 0 9px rgba(var(--glow), .3); }
+.dn-range:focus { outline: none; }

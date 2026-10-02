@@ -154,4 +154,13 @@
       }, { threshold: [0, 0.5, 1] }).observe(hero);
     }
   }
+
+  // DAY AND NIGHT : la boule déplace le rideau. --p porte sa position, le CSS fait le reste (2 octobre 2026).
+  document.querySelectorAll('.dn-stage').forEach(function (stage) {
+    var range = stage.querySelector('.dn-range');
+    if (!range) return;
+    var paint = function () { stage.style.setProperty('--p', range.value + '%'); };
+    range.addEventListener('input', paint);
+    paint();
+  });
 })();
