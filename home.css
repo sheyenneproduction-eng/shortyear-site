@@ -111,7 +111,8 @@ section { position: relative; scroll-margin-top: 84px; }
 .r-lit path, .r-bloom path { opacity: 0; transition: opacity .7s var(--ease); }
 .r-lit path.on { opacity: 1; }
 .r-bloom path.on { opacity: var(--bloom); }
-.r-bloom path.now { opacity: calc(var(--bloom) * .35); animation: now 2.8s ease-in-out infinite alternate; }
+.r-bloom path.now { opacity: calc(var(--bloom) * .35); }
+.live .r-bloom path.now { animation: now 2.8s ease-in-out infinite alternate; }
 @keyframes now { from { opacity: calc(var(--bloom) * .15); } to { opacity: calc(var(--bloom) * .6); } }
 .travel .r-lit path.on { animation: travel 5.5s ease-in-out infinite; animation-delay: calc(var(--i) * .22s + 2.4s); }
 @keyframes travel { 0%, 16%, 100% { filter: none; } 7% { filter: brightness(1.55); } }
@@ -120,7 +121,7 @@ section { position: relative; scroll-margin-top: 84px; }
   background: radial-gradient(circle, rgba(var(--glow), var(--halo)) 0%, rgba(var(--glow), calc(var(--halo) * .38)) 34%, rgba(var(--glow), 0) 64%); }
 .js .halo { opacity: 0; transition: opacity 1.6s ease .1s; }
 .js .lit .halo { opacity: 1; }
-.js .end-stage.lit .halo { animation: breathe 5s ease-in-out 1.2s infinite alternate; }
+.js .end-stage.lit.live .halo { animation: breathe 5s ease-in-out 1.2s infinite alternate; }
 @keyframes breathe { from { transform: scale(.97); opacity: .78; } to { transform: scale(1.14); opacity: 1; } }
 .flare { position: absolute; inset: 0; border-radius: 50%; pointer-events: none; opacity: 0; box-shadow: 0 0 0 2px rgba(var(--glow), .5), 0 0 60px 10px rgba(var(--glow), .35); }
 @keyframes flare { 0% { opacity: 0; transform: scale(.92); } 30% { opacity: 1; } 100% { opacity: 0; transform: scale(1.14); } }
@@ -144,7 +145,8 @@ section { position: relative; scroll-margin-top: 84px; }
 [data-theme="light"] .tglow { --tg: .26; }
 .tglow.left { left: 32%; }
 .js .tglow { opacity: 0; transition: opacity 1.4s ease; }
-.js .tglow.in { opacity: 1; animation: breathe-glow 5.5s ease-in-out .7s infinite alternate; }
+.js .tglow.in { opacity: 1; }
+.js .tglow.in.live { animation: breathe-glow 5.5s ease-in-out .7s infinite alternate; }
 @keyframes breathe-glow { from { scale: .94; opacity: .74; } to { scale: 1.16; opacity: 1; } }
 .curve-block { display: grid; justify-items: center; max-width: 760px; margin: clamp(32px, 5vw, 56px) auto 0; }
 .curve { margin: 0; display: grid; gap: 14px; }
@@ -159,7 +161,7 @@ section { position: relative; scroll-margin-top: 84px; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 .js .curve.in .cv-dip { animation: pop .8s var(--spring) 1.9s both; }
 @keyframes pop { from { opacity: 0; scale: .2; } to { opacity: 1; scale: 1; } }
-.js .curve.in .dip-glow { animation: breathe-dip 5.5s ease-in-out 2.7s infinite alternate; }
+.js .curve.in.live .dip-glow { animation: breathe-dip 5.5s ease-in-out 2.7s infinite alternate; }
 @keyframes breathe-dip { from { scale: 1; opacity: 1; } to { scale: 1.16; opacity: .74; } }
 .cv-here { fill: var(--accent); font-family: var(--mark); font-weight: 800; font-size: 15px; letter-spacing: .12em; }
 .cv-ends text { fill: var(--tx3); font-size: 14px; }
@@ -794,6 +796,8 @@ section { position: relative; scroll-margin-top: 84px; }
   #research.rq-on .rq::after { transition: transform .35s var(--ease); }
 }
 @media (max-width: 640px) {
+  .bg .aur { animation: none; will-change: auto; }
+  .live .plan-year::after { animation: none; }
   html.js .valley-shot[data-reveal], html.js :where(.tfl-logo, .why-grid)[data-reveal], html.js .tfl-row[data-reveal],
   html.js .cmp [data-reveal]:not(.head):not(.tglow), html.js :where(.head, .copy, .outro, .faq, .fine2, .m-shot, .end > *)[data-reveal],
   html.js [data-reveal].up { transform: none; transition: opacity .35s ease; }
