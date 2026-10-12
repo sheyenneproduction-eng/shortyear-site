@@ -793,3 +793,9 @@ section { position: relative; scroll-margin-top: 84px; }
   .m-dots button::before { transition: width .35s var(--ease), opacity .35s, background-color .35s; }
   #research.rq-on .rq::after { transition: transform .35s var(--ease); }
 }
+@media (max-width: 640px) {
+  .lite.js .valley-shot[data-reveal], .lite.js :where(.tfl-logo, .why-grid)[data-reveal], .lite.js .tfl-row[data-reveal],
+  .lite.js .cmp [data-reveal]:not(.head):not(.tglow), .lite.js :where(.head, .copy, .outro, .faq, .fine2, .m-shot, .end > *)[data-reveal],
+  .lite.js [data-reveal].up { transform: none; transition: opacity .35s ease; }
+  .lite .hw .hw-lv, .lite .hw .hw-lv.future, .lite .hw .hw-lv.past { filter: none; transition-property: transform, opacity, visibility; }
+}
