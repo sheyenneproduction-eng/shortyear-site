@@ -230,3 +230,19 @@
   src: url(home-8.woff2) format('woff2');
   unicode-range: U+30-39, U+41, U+43-46, U+48-49, U+4b, U+4f-50, U+52-54, U+56-57, U+59, U+61, U+65, U+68, U+72, U+74, U+79;
 }
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(archivo-black.woff2) format('woff2');
+  unicode-range: U+20-21, U+24-27, U+2c-2e, U+30-3b, U+3f, U+41-5a, U+61-7a, U+2019;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(archivo-600.woff2) format('woff2');
+  unicode-range: U+20-21, U+24-27, U+2c-2e, U+30-3b, U+3f, U+41-5a, U+61-7a, U+2019;
+}
