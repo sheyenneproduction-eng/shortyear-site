@@ -993,3 +993,10 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 @media (max-width: 899px) { .vc { height: 280px; } .vc-card { left: 10px; right: 10px; height: 250px; } .vc-pop { font-size: 16px; max-width: 260px; padding: 11px 16px; } .vc-pop.vc-l { left: -6px; } .vc-pop.vc-r { right: -6px; } }
 .vc-pop.vc-lb { left: -14px; bottom: 4px; } .vc-pop.vc-rt { right: -10px; top: -4px; }
 @media (max-width: 899px) { .vc-pop.vc-lb { left: -6px; } .vc-pop.vc-rt { right: -6px; } }
+.hero { min-height: 0; padding-block: clamp(40px, 5vw, 72px) clamp(40px, 5vw, 64px); }
+.sec { padding-block: clamp(64px, 8vw, 112px); }
+@media (max-width: 899px) { .hero { padding-block: 24px 32px; } .sec { padding-block: 56px; } }
+.hero { padding-block: 20px 36px; }
+.hero-goals { padding: 0; gap: 14px; }
+#why { padding-top: clamp(40px, 5vw, 72px); }
+@media (max-width: 899px) { .hero-goals { margin-top: 28px; } }
