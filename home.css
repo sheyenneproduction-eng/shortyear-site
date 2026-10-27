@@ -1058,3 +1058,9 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 @media (max-width: 899px) { .steps::before { right: auto; } }
 .steps { padding-left: 0; }
 .steps li { align-content: start; }
+.mq { -webkit-mask-image: none; mask-image: none; position: relative; }
+.mq::before, .mq::after { content: ""; position: absolute; z-index: 2; top: 0; bottom: 0; width: 8%; pointer-events: none; }
+.mq::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+.mq::after { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
+.mq-track { transform: translate3d(0,0,0); backface-visibility: hidden; }
+.qs-mq .qs-tag img { filter: none; }
