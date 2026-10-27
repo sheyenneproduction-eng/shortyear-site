@@ -1064,3 +1064,8 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 .mq::after { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
 .mq-track { transform: translate3d(0,0,0); backface-visibility: hidden; }
 .qs-mq .qs-tag img { filter: none; }
+.mq-track { animation: none; }
+.mq-track.mq-on { animation: mq-left var(--dur, 50s) linear infinite; }
+.mq:hover .mq-track { animation-play-state: running; }
+@media (hover: hover) and (pointer: fine) { .mq:hover .mq-track { animation-play-state: paused; } }
+@media (prefers-reduced-motion: reduce) { .mq-track.mq-on { animation: none; } }
