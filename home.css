@@ -1074,3 +1074,4 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 .hero .answer .hl-ink { position: absolute; left: 0; top: 0; padding-inline: inherit; color: #0B0F17; white-space: nowrap; pointer-events: none; clip-path: inset(0 0 0 0); }
 @keyframes hl-ink { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 .hero .answer [data-hl].hl-on { color: #0B0F17; }
+body { opacity: 1 !important; animation: none !important; }
