@@ -1069,3 +1069,4 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 .mq:hover .mq-track { animation-play-state: running; }
 @media (hover: hover) and (pointer: fine) { .mq:hover .mq-track { animation-play-state: paused; } }
 @media (prefers-reduced-motion: reduce) { .mq-track.mq-on { animation: none; } }
+.hero-sol { margin: 4px 0 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; color: var(--tx2); max-width: 440px; }
