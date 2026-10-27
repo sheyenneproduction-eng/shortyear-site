@@ -1022,3 +1022,31 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 .hw-tacs .back { right: 0; left: auto; top: 0; transform: rotate(3deg); opacity: 1; filter: brightness(.82); }
 .hw-tacs .front { left: 0; top: 122px; }
 .hw-tacs { margin-bottom: 26px; }
+.vs-hero { padding-block: clamp(30px, 5vw, 70px) 10px; text-align: center; }
+.vs-hero h1 { font-family: 'Archivo Black', var(--display); font-weight: 400; font-size: clamp(40px, 6vw, 72px); letter-spacing: -.03em; line-height: 1.02; margin-top: 16px; }
+.vs-hero h1 .k { color: var(--k); }
+.vs-lede { max-width: 640px; margin: 20px auto 0; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.5; color: var(--tx2); }
+.vs-sec { padding-block: clamp(30px, 4vw, 56px); }
+.vs-h2 { text-align: center; margin-bottom: 30px; } .vs-h2 .k { color: var(--k); }
+.vs-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 980px; margin: 0 auto; }
+.vs-card { padding: 28px 30px; border-radius: 26px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+.vs-card.vs-me { background: #fff; color: #0A1119; box-shadow: 0 40px 80px -40px rgba(0,6,40,.9), 0 0 120px -20px rgba(37,99,255,.45); }
+.vs-k { margin: 0; font-family: 'Archivo', var(--body); font-weight: 600; font-size: 12px; letter-spacing: .16em; color: var(--tx3); }
+.vs-me .vs-k { color: #1D5FE0; }
+.vs-card h2 { font-size: clamp(26px, 2.6vw, 34px); margin-top: 10px; }
+.vs-card p:not(.vs-k) { margin: 12px 0 0; line-height: 1.55; color: var(--tx2); } .vs-me p:not(.vs-k) { color: #4C5769; }
+.vs-card ul { margin: 14px 0 0; padding-left: 20px; line-height: 1.7; color: var(--tx2); } .vs-me ul { color: #33415A; }
+.vs-table { max-width: 980px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: inset 0 0 0 1px var(--line); }
+.vs-row { display: grid; grid-template-columns: 1fr 1.3fr 1.3fr; gap: 20px; padding: 18px 26px; border-top: 1px solid var(--line); font-size: 15.5px; line-height: 1.5; }
+.vs-row:first-child { border-top: 0; }
+.vs-row b { color: var(--tx); font-weight: 600; } .vs-row span { color: var(--tx2); }
+.vs-row span:last-child { color: var(--tx); }
+.vs-head { background: var(--surface); font-family: 'Archivo', var(--body); font-weight: 600; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+.vs-head span:last-child { color: var(--k); }
+.vs-both { max-width: 680px; margin: 30px auto 0; text-align: center; font-size: 18px; color: var(--tx2); }
+.vs-cta { text-align: center; } .vs-cta .play { display: inline-block; margin: 0 auto; } .vs-cta .play img { height: 72px; width: auto; }
+.vs-note { max-width: 620px; margin: 26px auto 0; font-size: 13px; color: var(--tx3); }
+@media (max-width: 899px) { .vs-cards { grid-template-columns: 1fr; } .vs-row { grid-template-columns: 1fr 1fr; gap: 6px 14px; padding: 16px 18px; font-size: 14.5px; } .vs-row b { grid-column: 1 / -1; } .vs-head span:first-child { display: none; } }
+.vs-hero .label { justify-content: center; text-align: center; display: flex; } .vs-hero .label::after { display: none; }
+.why2-lede { margin-top: 14px; font-family: "Archivo", var(--body); font-weight: 600; font-size: clamp(22px, 2.2vw, 30px); color: var(--tx); }
+.why2 .head .why2-lede { margin-top: 8px; } .why2 .head h2 { margin-top: 12px; }
