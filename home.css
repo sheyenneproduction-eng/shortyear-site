@@ -1000,3 +1000,25 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 .hero-goals { padding: 0; gap: 14px; }
 #why { padding-top: clamp(40px, 5vw, 72px); }
 @media (max-width: 899px) { .hero-goals { margin-top: 28px; } }
+.hw-tac { width: 460px; padding: 26px 30px; border-radius: 26px; background: #0B1740; color: #fff; transform: rotate(-2deg);
+  box-shadow: 0 0 0 3px #8CC8FF, 0 40px 70px -30px rgba(0,6,40,.8); }
+.hw-tac-k { margin: 0; display: inline-block; padding: 6px 14px; border-radius: 99px; background: #fff; color: #1D5FE0; font-family: 'Archivo', var(--body); font-weight: 600; font-size: 12px; letter-spacing: .14em; }
+.hw-tac b { display: block; margin-top: 14px; font-family: 'Archivo Black', var(--display); font-weight: 400; font-size: 34px; letter-spacing: -.02em; }
+.hw-tac-g { margin: 4px 0 0; font-size: 15px; color: #9FB3D9; }
+.hw-tac-d { display: flex; gap: 10px; margin-top: 18px; }
+.hw-tac-d i { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; font-style: normal; font-family: 'Archivo', var(--body); font-weight: 600; font-size: 15px; color: #9FB3D9; background: rgba(255,255,255,.08); }
+.hw-tac-d i.on { background: #4C8DFF; color: #fff; }
+.hw2-vis { height: calc(620px * var(--k, 1)); }
+.hw2-note { order: 3; margin: 14px 0 0; text-align: center; font-size: 11px; letter-spacing: .14em; opacity: .7; }
+.hw2 { display: flex; flex-direction: column; } .hw2-track { order: 1; } .hw2-nav { order: 2; }
+.hw-tacs { position: relative; width: 500px; height: 250px; }
+.hw-tacs .hw-tac { position: absolute; width: 440px; }
+.hw-tacs .back { right: 0; top: 0; transform: rotate(4deg); opacity: .78; box-shadow: 0 0 0 2px rgba(140,200,255,.5), 0 30px 60px -30px rgba(0,6,40,.8); }
+.hw-tacs .front { left: 0; top: 56px; transform: rotate(-2.5deg); }
+.hw-tacs { width: 520px; height: 300px; margin-bottom: 6px; }
+.hw-tacs .hw-tac { width: 400px; padding: 20px 24px; }
+.hw-tacs .hw-tac b { font-size: 28px; margin-top: 10px; }
+.hw-tacs .hw-tac-d { margin-top: 14px; gap: 8px; } .hw-tacs .hw-tac-d i { width: 38px; height: 38px; font-size: 14px; }
+.hw-tacs .back { right: 0; left: auto; top: 0; transform: rotate(3deg); opacity: 1; filter: brightness(.82); }
+.hw-tacs .front { left: 0; top: 122px; }
+.hw-tacs { margin-bottom: 26px; }
