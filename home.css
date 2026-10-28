@@ -1092,3 +1092,5 @@ body { opacity: 1 !important; animation: none !important; }
 [data-theme="light"] .vs3-y { color: #1D5FE0; } [data-theme="light"] .vs3-top .vs3-sy { color: #1D5FE0; } [data-theme="light"] .vs3-p, [data-theme="light"] .vs3-top { color: #5F6B7E; } [data-theme="light"] .vs3-n { color: #9AA4B5; }
 @media (max-width: 899px) { .vs3-row { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)); gap: 6px; padding: 14px 14px; font-size: 13px; } .vs3-top { font-size: 11px; } .vs3-y { font-size: 16px; } }
 .vs3-row > span:nth-child(n+3) .vs3-y { color: #93A3C2; font-weight: 400; } [data-theme="light"] .vs3-row > span:nth-child(n+3) .vs3-y { color: #5F6B7E; }
+.vs3-top .vs3-sy { display: inline-flex; align-items: center; gap: 8px; } .vs3-sy img { width: 22px; height: 22px; border-radius: 6px; flex: none; } @media (max-width: 899px) { .vs3-sy img { width: 16px; height: 16px; border-radius: 4px; } .vs3-top .vs3-sy { gap: 5px; } }
+@media (max-width: 899px) { .vs3-top .vs3-sy { flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; } .vs3-top > span { overflow-wrap: anywhere; } }
