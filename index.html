@@ -21,7 +21,7 @@
 <script>!function(){var e=document.documentElement,t=new URLSearchParams(location.search).get("theme"),a=null;try{a=localStorage.getItem("sy-theme")}catch(e){}var c="light"===t||"dark"===t?t:a||"dark";e.setAttribute("data-theme",c),e.classList.add("js"),(matchMedia("(prefers-reduced-motion: reduce)").matches||new URLSearchParams(location.search).has("still"))&&e.classList.add("still")}();</script>
 <style>html{background:#05080F;color:#EAF0F8}html[data-theme=light]{background:#F1F4FA;color:#0A1119}body{opacity:0;animation:sy-show 0s 2.5s forwards}@keyframes sy-show{to{opacity:1}}</style>
 <link rel="stylesheet" href="fonts/home.css?v=3c403220">
-<link rel="stylesheet" href="home.css?v=fe269d2e">
+<link rel="stylesheet" href="home.css?v=766014c9">
 </head>
 <body>
 <div class="bg" aria-hidden="true" data-live><span class="aur a1"></span><span class="aur a2"></span><span class="aur a3"></span><span class="grid"></span><span class="grain"></span></div>
@@ -334,66 +334,18 @@
       <div class="dn-track"><svg class="dn-ico dn-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><div class="dn-rail"><span class="dn-fill" aria-hidden="true"></span><input class="dn-range" type="range" min="0" max="100" value="50" step="1" aria-label="Slide between dark and light mode"></div><svg class="dn-ico dn-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></div>
     </div>
   </section>
-  <section class="wrap sec cmp" id="compare" data-frame="the difference" data-frame-top="96" style="padding-bottom:0">
-    <div class="head center" data-reveal>
-      <span class="tglow " data-reveal data-live aria-hidden="true"></span>
-      <h2 class="shine">Where other apps <span class="k">stop</span>.</h2>
+  <section class="wrap sec vs3" id="compare" data-frame="the difference" data-frame-top="96">
+    <div class="vs3-head" data-reveal><p class="label">NOT JUST ANOTHER GOAL APP</p><h2>Where others <span class="k">stop</span>.</h2></div>
+    <div class="vs3-card" data-reveal role="table" aria-label="Shortyear compared with a typical goal app, a paper notebook and a personal coach">
+      <div class="vs3-row vs3-top" role="row"><span role="columnheader"><span class="sr">What it does</span></span><span class="vs3-sy" role="columnheader">Shortyear</span><span role="columnheader">Goal apps</span><span role="columnheader">Notebook</span><span role="columnheader">Coach</span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">Tasks tied to your goals</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-p" title="Goals, with a separate to-do list">In part<span class="sr">: Goals, with a separate to-do list</span></span></span><span role="cell"><span class="vs3-p" title="You link them by hand">In part<span class="sr">: You link them by hand</span></span></span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">Daily tasks from your plan</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-p" title="Reminders, no plan">In part<span class="sr">: Reminders, no plan</span></span></span><span role="cell"><span class="vs3-n" title="You rewrite them every day"><span aria-hidden="true">–</span><span class="sr">No: You rewrite them every day</span></span></span><span role="cell"><span class="vs3-p" title="A plan, not your daily tasks">In part<span class="sr">: A plan, not your daily tasks</span></span></span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">A weekly score, 85% target</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-n" title="Progress bars, no weekly target"><span aria-hidden="true">–</span><span class="sr">No: Progress bars, no weekly target</span></span></span><span role="cell"><span class="vs3-n" title="Nothing counts for you"><span aria-hidden="true">–</span><span class="sr">No: Nothing counts for you</span></span></span><span role="cell"><span class="vs3-p" title="A weekly check-in">In part<span class="sr">: A weekly check-in</span></span></span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">A finish line every day and week</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-p" title="One deadline, far off">In part<span class="sr">: One deadline, far off</span></span></span><span role="cell"><span class="vs3-n" title="Dates you set yourself"><span aria-hidden="true">–</span><span class="sr">No: Dates you set yourself</span></span></span><span role="cell"><span class="vs3-p" title="Between sessions">In part<span class="sr">: Between sessions</span></span></span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">Main and side quests</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-p" title="Templates in some">In part<span class="sr">: Templates in some</span></span></span><span role="cell"><span class="vs3-n" title="A blank page"><span aria-hidden="true">–</span><span class="sr">No: A blank page</span></span></span><span role="cell"><span class="vs3-n" title="One goal at a time"><span aria-hidden="true">–</span><span class="sr">No: One goal at a time</span></span></span></div>
+      <div class="vs3-row" role="row"><span class="vs3-lab" role="rowheader">Something to keep at the end</span><span role="cell"><span class="vs3-y" aria-label="Yes">✓</span></span><span role="cell"><span class="vs3-p" title="Badges for streaks">In part<span class="sr">: Badges for streaks</span></span></span><span role="cell"><span class="vs3-p" title="The notebook itself">In part<span class="sr">: The notebook itself</span></span></span><span role="cell"><span class="vs3-n" title="Nothing"><span aria-hidden="true">–</span><span class="sr">No: Nothing</span></span></span></div>
     </div>
-    <div class="cmpA2" data-reveal>
-      <div class="cmpA2-grid" role="table" aria-label="Shortyear compared with a typical to-do list, tracker app and goal list">
-        <span class="pillar" aria-hidden="true"></span>
-        <div class="hdr" role="row">
-          <span class="col" role="columnheader"><span class="sr">What it does</span></span>
-          <span class="col" role="columnheader">To-do list</span>
-          <span class="col" role="columnheader">Tracker apps</span>
-          <span class="col" role="columnheader">Goal list</span>
-          <span class="col sy" role="columnheader"><svg class="wordmark cmp-wm" viewBox="-5 -87.6 695.0 116.2" role="img" aria-label="Shortyear"><text x="0" y="0" class="wm-text">Sh</text><g transform="translate(167.00 -82.60)" class="wm-ring"><path d="M56.80 0.13 A53.10 53.10 0 0 1 76.38 5.37 L68.46 21.60 A35.05 35.05 0 0 0 55.54 18.14 Z" style="--i:0"/><path d="M82.79 9.08 A53.10 53.10 0 0 1 97.12 23.41 L82.15 33.50 A35.05 35.05 0 0 0 72.70 24.05 Z" style="--i:1"/><path d="M100.83 29.82 A53.10 53.10 0 0 1 106.07 49.40 L88.06 50.66 A35.05 35.05 0 0 0 84.60 37.74 Z" style="--i:2"/><path d="M106.07 56.80 A53.10 53.10 0 0 1 100.83 76.38 L84.60 68.46 A35.05 35.05 0 0 0 88.06 55.54 Z" style="--i:3"/><path d="M97.12 82.79 A53.10 53.10 0 0 1 82.79 97.12 L72.70 82.15 A35.05 35.05 0 0 0 82.15 72.70 Z" style="--i:4"/><path d="M76.38 100.83 A53.10 53.10 0 0 1 56.80 106.07 L55.54 88.06 A35.05 35.05 0 0 0 68.46 84.60 Z" style="--i:5"/><path d="M49.40 106.07 A53.10 53.10 0 0 1 29.82 100.83 L37.74 84.60 A35.05 35.05 0 0 0 50.66 88.06 Z" style="--i:6"/><path d="M23.41 97.12 A53.10 53.10 0 0 1 9.08 82.79 L24.05 72.70 A35.05 35.05 0 0 0 33.50 82.15 Z" style="--i:7"/><path d="M5.37 76.38 A53.10 53.10 0 0 1 0.13 56.80 L18.14 55.54 A35.05 35.05 0 0 0 21.60 68.46 Z" style="--i:8"/><path d="M0.13 49.40 A53.10 53.10 0 0 1 5.37 29.82 L21.60 37.74 A35.05 35.05 0 0 0 18.14 50.66 Z" style="--i:9"/><path d="M9.08 23.41 A53.10 53.10 0 0 1 23.41 9.08 L33.50 24.05 A35.05 35.05 0 0 0 24.05 33.50 Z" style="--i:10"/><path d="M29.82 5.37 A53.10 53.10 0 0 1 49.40 0.13 L50.66 18.14 A35.05 35.05 0 0 0 37.74 21.60 Z" style="--i:11"/></g><text x="275.7" y="0" class="wm-text">rtyear</text></svg><span class="syw" aria-hidden="true">Shortyear</span></span>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">Tasks tied to your goals</div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: No goal to count for</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Some link a goal</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Steps, no daily tasks</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">Daily tasks from your plan</div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Repeats, no plan</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Daily ticks, no plan</span></div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: No daily view</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">A weekly score, 85% target</div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: Nothing to score</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Rates, no target</span></div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: No weekly score</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">A finish line every day and week</div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Due dates only</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Every day, no end</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: 1 deadline, far off</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">Main and side quests</div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: Tasks only</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Ready-made side quests</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Templates in some</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-        <div class="r" role="row">
-          <div class="lab" role="rowheader">Something to keep at the end</div>
-          <div class="c" role="cell"><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg><span class="sr">No: Nothing to keep</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Badges for streaks</span></div>
-          <div class="c" role="cell"><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg><span class="sr">In part: Done, then archived</span></div>
-          <div class="c sy" role="cell"><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg><span class="sr">Yes</span></div>
-        </div>
-      </div>
-    </div>
-    <p class="cmpA2-foot" data-reveal aria-hidden="true"><span><svg class="ico yes" viewBox="0 0 24 24" aria-hidden="true"><circle class="disc" cx="12" cy="12" r="11"/><path class="tick" d="M7.3 12.5l3.1 3.1 6.4-6.7"/></svg>Yes</span><span><svg class="ico part" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/><path class="half" d="M12 4.6a7.4 7.4 0 0 0 0 14.8z"/></svg>In part</span><span><svg class="ico no" viewBox="0 0 24 24" aria-hidden="true"><circle class="ring" cx="12" cy="12" r="10.2"/></svg>No</span><i class="sep"></i><span>Typical app of each kind.</span></p>
+    <p class="vs3-note" data-reveal>Compared with a typical goal app, a paper notebook and a personal coach.</p>
   </section>
   <section class="wrap sec price" data-frame="price" data-frame-top="96">
     <div class="head center" data-reveal>

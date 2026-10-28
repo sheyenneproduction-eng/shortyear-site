@@ -1075,3 +1075,20 @@ main > section.wrap::before { filter: blur(30px); width: min(1000px, 110vw); asp
 @keyframes hl-ink { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 .hero .answer [data-hl].hl-on { color: #0B0F17; }
 body { opacity: 1 !important; animation: none !important; }
+.vs3-head { max-width: 1000px; margin: 0 auto; }
+.vs3-head h2 { margin-top: 14px; }
+.vs3-card { max-width: 1000px; margin: 34px auto 0; border-radius: 22px; overflow: hidden; background: linear-gradient(180deg, rgba(23,38,96,.92), rgba(10,20,58,.92));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(140,180,255,.14), 0 30px 60px -25px rgba(0,0,0,.7), 5px 5px 0 rgba(76,141,255,.22); }
+.vs3-row { display: grid; grid-template-columns: minmax(0, 2.2fr) repeat(4, minmax(0, 1fr)); align-items: center; gap: 12px; padding: 18px 26px; border-top: 1px solid rgba(255,255,255,.07); font-size: 16px; }
+.vs3-row:first-child { border-top: 0; }
+.vs3-top { padding-block: 22px; font-weight: 600; color: #93A3C2; }
+.vs3-top .vs3-sy { color: #8CB4FF; }
+.vs3-lab { color: #E7EDF7; font-weight: 500; }
+.vs3-y { color: #4C8DFF; font-size: 19px; font-weight: 700; }
+.vs3-p { color: #93A3C2; } .vs3-n { color: #5D6B86; }
+.vs3-note { max-width: 1000px; margin: 14px auto 0; font-size: 13px; color: var(--tx3); }
+[data-theme="light"] .vs3-card { background: #fff; box-shadow: 0 0 0 1px rgba(10,17,25,.07), 0 30px 60px -34px rgba(22,36,70,.4), 5px 5px 0 rgba(29,95,224,.14); }
+[data-theme="light"] .vs3-row { border-top-color: rgba(10,17,25,.07); } [data-theme="light"] .vs3-lab { color: #0A1119; }
+[data-theme="light"] .vs3-y { color: #1D5FE0; } [data-theme="light"] .vs3-top .vs3-sy { color: #1D5FE0; } [data-theme="light"] .vs3-p, [data-theme="light"] .vs3-top { color: #5F6B7E; } [data-theme="light"] .vs3-n { color: #9AA4B5; }
+@media (max-width: 899px) { .vs3-row { grid-template-columns: minmax(0, 1.6fr) repeat(4, minmax(0, 1fr)); gap: 6px; padding: 14px 14px; font-size: 13px; } .vs3-top { font-size: 11px; } .vs3-y { font-size: 16px; } }
+.vs3-row > span:nth-child(n+3) .vs3-y { color: #93A3C2; font-weight: 400; } [data-theme="light"] .vs3-row > span:nth-child(n+3) .vs3-y { color: #5F6B7E; }
