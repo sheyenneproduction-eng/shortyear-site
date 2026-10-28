@@ -1096,3 +1096,25 @@ body { opacity: 1 !important; animation: none !important; }
 @media (max-width: 899px) { .vs3-top .vs3-sy { flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; } .vs3-top > span { overflow-wrap: anywhere; } }
 .why2-sub { margin: 10px 0 0; font-size: clamp(16px, 1.3vw, 18px); color: var(--tx2); max-width: 640px; }
 .why2 .head { row-gap: 10px; } .why2 .head .why2-sub { margin-top: 0; }
+.qs-cards { position: absolute; z-index: 5; left: 50%; top: 50%; width: 340px; transform: translate(-50%, -50%); display: grid; gap: 22px; }
+.qs-worlds { height: 560px; }
+.qc { margin: 0; padding: 20px 22px; border-radius: 22px; background: #fff; color: #0A1119; box-shadow: 0 34px 70px -26px rgba(0,6,40,.95); transform: rotate(var(--r)); }
+.qc-k { margin: 0; display: flex; justify-content: space-between; font-family: 'Archivo', var(--body); font-weight: 600; font-size: 12px; letter-spacing: .16em; color: #1D5FE0; }
+.qc-k span { color: #5F6B7E; }
+.qc b { display: block; margin-top: 6px; font-family: 'Archivo Black', var(--display); font-weight: 400; font-size: 23px; letter-spacing: -.02em; line-height: 1.15; }
+.qc-bar { display: block; height: 8px; margin-top: 12px; border-radius: 9px; background: #E3E9F4; overflow: hidden; }
+.qc-bar i { display: block; width: 33%; height: 100%; background: linear-gradient(90deg, #1D5FE0, #4C8DFF); }
+.qc-lv { display: flex; gap: 6px; margin-top: 12px; }
+.qc-lv span { padding: 6px 10px; border-radius: 99px; font-family: 'Archivo', var(--body); font-weight: 600; font-size: 12px; white-space: nowrap; background: #EEF2F8; color: #5F6B7E; }
+.qc-lv span.on { background: #B0683A; color: #fff; }
+.qc-s { margin: 8px 0 0; font-size: 14px; color: #5F6B7E; }
+.qs-arrows { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 6; pointer-events: none; overflow: visible; }
+.qs-arrows path { fill: none; stroke: #EAF0F8; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.qs-arrows .dash { stroke-dasharray: 1 9; }
+@media (max-width: 1023px) {
+  .qs-worlds { height: auto; }
+  .qs-main { padding-bottom: 190px; } .qs-side { padding-top: 220px; }
+  .qs-cards { width: min(320px, 86%); gap: 14px; }
+  .qc { padding: 16px 18px; } .qc b { font-size: 19px; } .qc-lv span { font-size: 11px; padding: 5px 8px; }
+  .qs-arrows { display: none; }
+}
