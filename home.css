@@ -1094,3 +1094,5 @@ body { opacity: 1 !important; animation: none !important; }
 .vs3-row > span:nth-child(n+3) .vs3-y { color: #93A3C2; font-weight: 400; } [data-theme="light"] .vs3-row > span:nth-child(n+3) .vs3-y { color: #5F6B7E; }
 .vs3-top .vs3-sy { display: inline-flex; align-items: center; gap: 8px; } .vs3-sy img { width: 22px; height: 22px; border-radius: 6px; flex: none; } @media (max-width: 899px) { .vs3-sy img { width: 16px; height: 16px; border-radius: 4px; } .vs3-top .vs3-sy { gap: 5px; } }
 @media (max-width: 899px) { .vs3-top .vs3-sy { flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; } .vs3-top > span { overflow-wrap: anywhere; } }
+.why2-sub { margin: 10px 0 0; font-size: clamp(16px, 1.3vw, 18px); color: var(--tx2); max-width: 640px; }
+.why2 .head { row-gap: 10px; } .why2 .head .why2-sub { margin-top: 0; }
