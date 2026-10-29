@@ -1118,3 +1118,8 @@ body { opacity: 1 !important; animation: none !important; }
   .qc { padding: 16px 18px; } .qc b { font-size: 19px; } .qc-lv span { font-size: 11px; padding: 5px 8px; }
   .qs-arrows { display: none; }
 }
+main > section.wrap::before, .hero-goals::before { filter: none !important; }
+.top.solid { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+[data-theme="dark"] .top.solid { background: rgba(5,8,15,.94); }
+[data-theme="light"] .top.solid { background: rgba(241,244,250,.96); }
+.bg .grain { display: none !important; }
